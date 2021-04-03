@@ -8,51 +8,35 @@
       </router-link></div>
 
       <div class="navbar-box" >
-         <div v-bind:key="tabs[0].key" v-bind:class = "{'navbar-item-click':tabs[0].key == currentTabKey}"  @click="currentTabKey = tabs[0].key">
+         
           <router-link class="navbar-item" to="/index" >
             <div class="navbar-icon icon-dashboard" ></div>
-            <div class="navbar-text" >Tổng quan</div>
+            <div class="navbar-text" >Tổng quan<
         </router-link></div>
-        <div v-bind:key="tabs[1].key" v-bind:class = "{'navbar-item-click':tabs[1].key == currentTabKey}"  @click="currentTabKey = tabs[1].key">
+       
         <router-link class="navbar-item" to="/report" >
           <div class="navbar-icon icon-report"></div>
-          <div class="navbar-text">Báo cáo</div>
+          <div class="navbar-text">Báo cáo
         </router-link></div>
-         <div  v-bind:key="tabs[2].key" v-bind:class = "{'navbar-item-click':tabs[2].key == currentTabKey}"  @click="currentTabKey = tabs[2].key">
+         
          <router-link class="navbar-item" to="/customer">
               <div class="navbar-icon icon-dic-employee"></div>
                 <div class="navbar-text">Danh sách khách hàng</div>
-            </router-link></div>
-           <div  v-bind:key="tabs[3].key" v-bind:class = "{'navbar-item-click':tabs[3].key == currentTabKey}"  @click="currentTabKey = tabs[3].key">
+            </router-link>
+       
              <router-link class="navbar-item" to="/employee">
                <div class="navbar-icon icon-dic-employee"></div>
                 <div class="navbar-text">Danh sách nhân viên</div>
-            </router-link></div>
-             <div  v-bind:key="tabs[4].key" v-bind:class = "{'navbar-item-click':tabs[4].key == currentTabKey}"  @click="currentTabKey = tabs[4].key">
+            </router-link>
+            
             <router-link class="navbar-item" to="/setting">
               <div class="navbar-icon icon-setting"></div>
               <div class="navbar-text">Cài đặt</div>
-            </router-link></div>
+            </router-link>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data(){
-    return{
-    currentTabKey: 'dashboard',
-    tabs: [
-        { key: 'dashboard'},
-        { key: 'report' },
-        { key: 'customer'},
-        { key: 'employee'},
-        { key: 'setting'},       
-    ]}
-  }
-}
-</script>
 
 <style scoped>
 #navbar {
@@ -126,4 +110,7 @@ export default {
   margin-left: 10px;
 }
 
+.router-link-active{
+  background-color: #bebebe;
+}
 </style>
